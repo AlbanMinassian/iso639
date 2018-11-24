@@ -7,6 +7,7 @@
 ```rust
 [dependencies]
 "iso639-1": "0.1.2"
+"iso639-2": "0.1.2"
 ```
 
 ``src/main.rs`` :
