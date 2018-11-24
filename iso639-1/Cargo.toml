@@ -1,0 +1,15 @@
+# --------------------------------------------------------------------
+[package]
+# --------------------------------------------------------------------
+name = "iso639_1"
+license = "MIT"
+version = "0.1.0"
+authors = ["Alban Minassian"]
+description = "iso639-1 enum"
+homepage = "https://github.com/AlbanMinassian/iso639"
+repository = "https://github.com/AlbanMinassian/iso639"
+documentation = "https://docs.rs/iso639-1"
+readme = "../README.md"
+workspace = ".."
+edition = "2018"
+
