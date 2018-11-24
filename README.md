@@ -6,7 +6,7 @@
 
 ```rust
 [dependencies]
-"iso639-1": "0.1.0"
+"iso639-1": "0.1.2"
 ```
 
 ``src/main.rs`` :
@@ -15,9 +15,12 @@
 extern crate iso639_1;
 use iso639_1::Iso639_1;
 
+use iso639_2::Iso639_2;
+extern crate iso639_2;
+
 pub fn main() {
     println!("{:?}", Iso639_1::En)
-    println!("{:?}", Iso639_1::Fr)
+    println!("{:?}", Iso639_2::Fra)
 }
 ```
 
