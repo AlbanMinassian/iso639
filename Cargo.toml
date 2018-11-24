@@ -1,4 +1,5 @@
 [workspace]
 members = [
-  "iso639-1"
+  "iso639-1",
+  "iso639-2",
 ]
