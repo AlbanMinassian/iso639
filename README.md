@@ -6,8 +6,8 @@
 
 ```rust
 [dependencies]
-"iso639-1": "0.1.5" // beware hyphen
-"iso639_2": "0.1.5"// beware underscore
+"iso639-1": "0.1.6" // beware hyphen
+"iso639_2": "0.1.6"// beware underscore
 ```
 
 ``src/main.rs`` :

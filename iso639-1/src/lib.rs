@@ -1,5 +1,9 @@
-//! [Iso639_1](https://github.com/AlbanMinassian/iso639)
+//! # iso639-1
 //!
+//! iso639 v1 enum
+//!
+//! github: https://github.com/AlbanMinassian/iso639
+//! license: MIT
 
 // ------------------------------------------------------------------------------------
 // enum iso639 version 1
