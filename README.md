@@ -15,8 +15,8 @@
 extern crate iso639_1;
 use iso639_1::Iso639_1;
 
-use iso639_2::Iso639_2;
 extern crate iso639_2;
+use iso639_2::Iso639_2;
 
 pub fn main() {
     println!("{:?}", Iso639_1::En)
