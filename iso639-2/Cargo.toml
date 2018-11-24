@@ -1,9 +1,9 @@
 # --------------------------------------------------------------------
 [package]
 # --------------------------------------------------------------------
-name = "iso639_2"
+name = "iso639-2"
 license = "MIT"
-version = "0.1.3"
+version = "0.1.4"
 authors = ["Alban Minassian"]
 description = "iso639-2 enum"
 homepage = "https://github.com/AlbanMinassian/iso639"
