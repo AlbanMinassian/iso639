@@ -1,14 +1,14 @@
 # --------------------------------------------------------------------
 [package]
 # --------------------------------------------------------------------
-name = "iso639-2"
+name = "iso639_2"
 license = "MIT"
-version = "0.1.4"
+version = "0.1.5"
 authors = ["Alban Minassian"]
-description = "iso639-2 enum"
+description = "iso639_2 enum"
 homepage = "https://github.com/AlbanMinassian/iso639"
 repository = "https://github.com/AlbanMinassian/iso639"
-documentation = "https://docs.rs/iso639-2"
+documentation = "https://docs.rs/iso639_2"
 readme = "../README.md"
 workspace = ".."
 edition = "2018"

@@ -6,8 +6,8 @@
 
 ```rust
 [dependencies]
-"iso639-1": "0.1.4"
-"iso639-2": "0.1.4"
+"iso639-1": "0.1.5" // beware hyphen
+"iso639_2": "0.1.5"// beware underscore
 ```
 
 ``src/main.rs`` :
@@ -29,7 +29,7 @@ pub fn main() {
 
 - [wikipedia ISO_639](https://en.wikipedia.org/wiki/ISO_639) [[en](https://en.wikipedia.org/wiki/ISO_639), [fr](https://fr.wikipedia.org/wiki/ISO_639), [de](https://de.wikipedia.org/wiki/ISO_639), [fr](https://fr.wikipedia.org/wiki/ISO_639), [es](https://es.wikipedia.org/wiki/ISO_639), [it](https://it.wikipedia.org/wiki/ISO_639)]
 - [documentation iso639-1](https://docs.rs/iso639-1)
-- [documentation iso639-2](https://docs.rs/iso639-2)
+- [documentation iso639-2](https://docs.rs/iso639_2)
 
 ## License ##
 
