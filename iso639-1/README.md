@@ -21,9 +21,9 @@ extern crate iso639_1;
 use iso639_1::{Iso639_1, get_enum, get_code_iso639_3};
 
 pub fn main() {
-    println!("{:?}", Iso639_1::En);
-    println!("{:?}", get_enum("it"));
-    println!("{}", get_code_iso639_3("fr"));
+    assert!(Iso639_1::Fr != Iso639_1::En);
+    assert!(get_enum("fr") == Iso639_1::Fr);
+    assert!(get_code_iso639_3("fr") == "fra");
 }
 ```
 

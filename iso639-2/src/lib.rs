@@ -18,6 +18,7 @@
 /// use iso639_2::Iso639_2;
 /// fn main() {
 ///     println!("{:?}", Iso639_2::Eng);
+///     assert!(Iso639_2::Fra != Iso639_2::Eng);
 /// }
 /// ```
 #[derive(Clone, Debug, PartialEq)]

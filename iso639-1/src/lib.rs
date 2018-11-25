@@ -18,6 +18,7 @@
 /// use iso639_1::Iso639_1;
 /// fn main() {
 ///     println!("{:?}", Iso639_1::En);
+///     assert!(Iso639_1::Fr != Iso639_1::En);
 /// }
 /// ```
 #[derive(Clone, Debug, PartialEq)]
@@ -214,8 +215,10 @@ pub enum Iso639_1 {
 /// ```rust
 /// extern crate iso639_1;
 /// use iso639_1::get_enum;
+/// use iso639_1::Iso639_1;
 /// fn main() {
-///     println!("{:?}", get_enum("fr"));
+///     let lang = get_enum("fr");
+///     assert!(lang == Iso639_1::Fr);
 /// }
 /// ```
 pub fn get_enum(language: &str) -> Iso639_1 {
@@ -416,7 +419,8 @@ pub fn get_enum(language: &str) -> Iso639_1 {
 /// extern crate iso639_1;
 /// use iso639_1::get_code_iso639_3;
 /// fn main() {
-///     println!("{}", get_code_iso639_3("fr"));
+///     let lang = get_code_iso639_3("fr");
+///     assert!(lang == "fra");
 /// }
 /// ```
 pub fn get_code_iso639_3(language: &str) -> &str {
