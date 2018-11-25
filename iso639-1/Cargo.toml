@@ -3,13 +3,13 @@
 # --------------------------------------------------------------------
 name = "iso639-1"
 license = "MIT"
-version = "0.1.6"
+version = "0.1.7"
 authors = ["Alban Minassian"]
-description = "iso639-1 enum"
+description = "iso639-1 enum and utils"
 homepage = "https://github.com/AlbanMinassian/iso639"
 repository = "https://github.com/AlbanMinassian/iso639"
 documentation = "https://docs.rs/iso639-1"
-readme = "../README.md"
+readme = "README.md"
 workspace = ".."
 edition = "2018"
 

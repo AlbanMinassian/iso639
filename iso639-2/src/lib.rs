@@ -2,12 +2,10 @@
 //!
 //! iso639 v2 enum
 //!
-//! github: https://github.com/AlbanMinassian/iso639
+//! github: [https://github.com/AlbanMinassian/iso639](https://github.com/AlbanMinassian/iso639)
+//!
 //! license: MIT
 
-// ------------------------------------------------------------------------------------
-// enum iso639 version 2
-// ------------------------------------------------------------------------------------
 #[derive(Clone, Debug, PartialEq)]
 pub enum Iso639_2 {
     Aar,

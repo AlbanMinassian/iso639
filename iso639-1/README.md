@@ -1,6 +1,6 @@
-# iso639 #
+# iso639-1 #
 
-## Example
+## Usage ##
 
 ``Cargo.toml`` :
 
@@ -21,18 +21,10 @@ pub fn main() {
     println!("{}", get_code_iso639_3("fr"))
 }
 ```
-## Iso639-1 ##
-
-See full [README.md](./iso639-1/README.md)
-
-## Iso639-2 ##
-
-See full [README.md](./iso639-2/README.md)
 
 ## Links ##
 
 - [documentation iso639-1 (docs.rs)](https://docs.rs/iso639-1)
-- [documentation iso639_2 (docs.rs)](https://docs.rs/iso639_2)
 - [wikipedia ISO_639](https://en.wikipedia.org/wiki/ISO_639) [[en](https://en.wikipedia.org/wiki/ISO_639), [fr](https://fr.wikipedia.org/wiki/ISO_639), [de](https://de.wikipedia.org/wiki/ISO_639), [fr](https://fr.wikipedia.org/wiki/ISO_639), [es](https://es.wikipedia.org/wiki/ISO_639), [it](https://it.wikipedia.org/wiki/ISO_639)]
 
 ## License ##

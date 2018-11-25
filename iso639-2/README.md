@@ -1,37 +1,26 @@
-# iso639 #
+# iso639_2 #
 
-## Example
+## Usage ##
 
 ``Cargo.toml`` :
 
 ```rust
 [dependencies]
-"iso639-1": "0.1.7"
+"iso639_2": "0.1.7" // beware underscore
 ```
 
 ``src/main.rs`` :
 
 ```rust
-extern crate iso639_1;
-use iso639_1::{Iso639_1, get_enum, get_code_iso639_3};
-
+extern crate iso639_2;
+use iso639_2::Iso639_2;
 pub fn main() {
-    println!("{:?}", Iso639_1::En)
-    println!("{:?}", get_enum("it"))
-    println!("{}", get_code_iso639_3("fr"))
+    println!("{:?}", Iso639_2::En)
 }
 ```
-## Iso639-1 ##
-
-See full [README.md](./iso639-1/README.md)
-
-## Iso639-2 ##
-
-See full [README.md](./iso639-2/README.md)
 
 ## Links ##
 
-- [documentation iso639-1 (docs.rs)](https://docs.rs/iso639-1)
 - [documentation iso639_2 (docs.rs)](https://docs.rs/iso639_2)
 - [wikipedia ISO_639](https://en.wikipedia.org/wiki/ISO_639) [[en](https://en.wikipedia.org/wiki/ISO_639), [fr](https://fr.wikipedia.org/wiki/ISO_639), [de](https://de.wikipedia.org/wiki/ISO_639), [fr](https://fr.wikipedia.org/wiki/ISO_639), [es](https://es.wikipedia.org/wiki/ISO_639), [it](https://it.wikipedia.org/wiki/ISO_639)]
 
