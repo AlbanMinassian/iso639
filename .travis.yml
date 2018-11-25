@@ -5,6 +5,10 @@ rust:
     - beta
     - nightly
 
+cache:
+    cargo: true
+    apt: true
+
 script:
     - cargo build --all
     - cargo test --all
