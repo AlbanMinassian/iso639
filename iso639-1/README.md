@@ -1,12 +1,14 @@
 # iso639-1 #
 
+[![Build Status](https://travis-ci.org/AlbanMinassian/iso639.svg?branch=master)](https://travis-ci.org/AlbanMinassian/iso639)
+
 ## Usage ##
 
 ``Cargo.toml`` :
 
 ```rust
 [dependencies]
-iso639-1 = "0.1.9"
+iso639-1 = "0.1.10"
 ```
 
 ``src/main.rs`` :
