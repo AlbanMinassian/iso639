@@ -10,7 +10,16 @@
 //!
 //! license: MIT
 
-/// iso639 enum
+/// iso639-1 enum
+///
+/// # Examples
+/// ```rust
+/// extern crate iso639_1;
+/// use iso639_1::Iso639_1;
+/// fn main() {
+///     println!("{:?}", Iso639_1::En);
+/// }
+/// ```
 #[derive(Clone, Debug, PartialEq)]
 pub enum Iso639_1 {
     Aa, // 639-2: aar, name: Afar (Afaraf)
@@ -199,8 +208,16 @@ pub enum Iso639_1 {
     Zu, // 639-2: zul, name: Zulu (isiZulu)
 }
 
-/// return enum ``Iso639_1`` switch iso639-1 string (2 chars)
-/// else panic
+/// return enum ``Iso639_1`` switch iso639-1 string (2 chars) else panic
+///
+/// # Examples
+/// ```rust
+/// extern crate iso639_1;
+/// use iso639_1::get_enum;
+/// fn main() {
+///     println!("{:?}", get_enum("fr"));
+/// }
+/// ```
 pub fn get_enum(language: &str) -> Iso639_1 {
     match language {
         // match iso639-1
@@ -392,8 +409,16 @@ pub fn get_enum(language: &str) -> Iso639_1 {
     }
 }
 
-/// get iso639-3 string (3 chars) switch iso639-1 string (2 chars)
-/// else panic
+/// get iso639-3 string (3 chars) switch iso639-1 string (2 chars) else panic
+///
+/// # Examples
+/// ```rust
+/// extern crate iso639_1;
+/// use iso639_1::get_code_iso639_3;
+/// fn main() {
+///     println!("{}", get_code_iso639_3("fr"));
+/// }
+/// ```
 pub fn get_code_iso639_3(language: &str) -> &str {
     match language {
         "aa" => "aar",

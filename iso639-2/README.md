@@ -11,7 +11,7 @@
 
 ```rust
 [dependencies]
-iso639_2 = "0.1.9" // beware underscore
+iso639_2 = "0.1.10" // beware underscore
 ```
 
 ``src/main.rs`` :
@@ -20,7 +20,7 @@ iso639_2 = "0.1.9" // beware underscore
 extern crate iso639_2;
 use iso639_2::Iso639_2;
 pub fn main() {
-    println!("{:?}", Iso639_2::En)
+    println!("{:?}", Iso639_2::En);
 }
 ```
 

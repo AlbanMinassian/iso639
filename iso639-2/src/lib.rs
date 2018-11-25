@@ -10,6 +10,16 @@
 //!
 //! license: MIT
 
+/// iso639-2 enum
+///
+/// # Examples
+/// ```rust
+/// extern crate iso639_2;
+/// use iso639_2::Iso639_2;
+/// fn main() {
+///     println!("{:?}", Iso639_2::Eng);
+/// }
+/// ```
 #[derive(Clone, Debug, PartialEq)]
 pub enum Iso639_2 {
     Aar,

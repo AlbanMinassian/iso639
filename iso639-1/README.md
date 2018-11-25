@@ -11,7 +11,7 @@
 
 ```rust
 [dependencies]
-iso639-1 = "0.1.10"
+iso639-1 = "0.1.11"
 ```
 
 ``src/main.rs`` :
@@ -21,9 +21,9 @@ extern crate iso639_1;
 use iso639_1::{Iso639_1, get_enum, get_code_iso639_3};
 
 pub fn main() {
-    println!("{:?}", Iso639_1::En)
-    println!("{:?}", get_enum("it"))
-    println!("{}", get_code_iso639_3("fr"))
+    println!("{:?}", Iso639_1::En);
+    println!("{:?}", get_enum("it"));
+    println!("{}", get_code_iso639_3("fr"));
 }
 ```
 
