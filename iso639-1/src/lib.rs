@@ -195,7 +195,8 @@ pub enum Iso639_1 {
     Zu, // 639-2: zul, name: Zulu (isiZulu)
 }
 
-/// return enum ``Iso639_1`` switch iso639-1 else panic
+/// return enum ``Iso639_1`` switch iso639-1 string (2 chars)
+/// else panic
 pub fn get_enum(language: &str) -> Iso639_1 {
     match language {
         // match iso639-1
@@ -387,7 +388,8 @@ pub fn get_enum(language: &str) -> Iso639_1 {
     }
 }
 
-/// get iso639-3 string swith iso639-1 string (or panic)
+/// get iso639-3 string (3 chars) switch iso639-1 string (2 chars)
+/// else panic
 pub fn get_code_iso639_3(language: &str) -> &str {
     match language {
         "aa" => "aar",
