@@ -3,7 +3,7 @@
 # --------------------------------------------------------------------
 name = "iso639-1"
 license = "MIT"
-version = "0.1.12"
+version = "0.2.0"
 authors = ["Alban Minassian"]
 description = "iso639-1 enum and utils"
 homepage = "https://github.com/AlbanMinassian/iso639"
@@ -11,4 +11,9 @@ repository = "https://github.com/AlbanMinassian/iso639"
 documentation = "https://docs.rs/iso639-1"
 readme = "README.md"
 workspace = ".."
+
+# --------------------------------------------------------------------
+[dependencies]
+# --------------------------------------------------------------------
+failure = "0.1.3"
 
