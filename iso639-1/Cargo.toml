@@ -3,7 +3,7 @@
 # --------------------------------------------------------------------
 name = "iso639-1"
 license = "MIT"
-version = "0.1.11"
+version = "0.1.12"
 authors = ["Alban Minassian"]
 description = "iso639-1 enum and utils"
 homepage = "https://github.com/AlbanMinassian/iso639"

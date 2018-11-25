@@ -11,7 +11,7 @@
 
 ```rust
 [dependencies]
-iso639-1 = "0.1.11"
+iso639-1 = "0.1.12"
 ```
 
 ``src/main.rs`` :
