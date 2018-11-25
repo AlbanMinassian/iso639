@@ -6,7 +6,7 @@
 
 ```rust
 [dependencies]
-"iso639_2": "0.1.7" // beware underscore
+iso639_2 = "0.1.8" // beware underscore
 ```
 
 ``src/main.rs`` :

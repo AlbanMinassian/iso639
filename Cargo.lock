@@ -1,8 +1,8 @@
 [[package]]
 name = "iso639-1"
-version = "0.1.8"
+version = "0.1.9"
 
 [[package]]
 name = "iso639_2"
-version = "0.1.7"
+version = "0.1.8"
 
