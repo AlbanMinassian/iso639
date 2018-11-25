@@ -1,5 +1,9 @@
 //! # iso639_2
 //!
+//! [![Build Status](https://travis-ci.org/AlbanMinassian/iso639.svg?branch=master)](https://travis-ci.org/AlbanMinassian/iso639)
+//! [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+//! [![iso639_2 Latest Version](https://img.shields.io/crates/v/iso639_2.svg)](https://crates.io/crates/iso639_2)
+//!
 //! iso639 v2 enum
 //!
 //! github: [https://github.com/AlbanMinassian/iso639](https://github.com/AlbanMinassian/iso639)

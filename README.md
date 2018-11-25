@@ -1,6 +1,9 @@
 # iso639 #
 
 [![Build Status](https://travis-ci.org/AlbanMinassian/iso639.svg?branch=master)](https://travis-ci.org/AlbanMinassian/iso639)
+[![codecov](https://codecov.io/gh/AlbanMinassian/iso639/branch/master/graph/badge.svg)](https://codecov.io/gh/AlbanMinassian/iso639)
+[![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 ## Example
 
@@ -27,9 +30,15 @@ pub fn main() {
 
 See full [README.md](./iso639-1/README.md)
 
+[![iso639-1 Latest Version](https://img.shields.io/crates/v/iso639-1.svg)](https://crates.io/crates/iso639-1)
+
 ## Iso639-2 ##
 
 See full [README.md](./iso639-2/README.md)
+
+[![iso639_2 Latest Version](https://img.shields.io/crates/v/iso639_2.svg)](https://crates.io/crates/iso639_2)
+
+
 
 ## Links ##
 
