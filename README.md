@@ -7,14 +7,14 @@
 
 ## Example
 
-``Cargo.toml`` :
+``Cargo.toml``
 
 ```rust
 [dependencies]
 iso639-1 = "0.2.0"
 ```
 
-``src/main.rs`` :
+``src/main.rs`` ([gist](https://gist.github.com/AlbanMinassian/320cd39edd5a7a553f2df157e9cc35b1))
 
 ```rust
 extern crate iso639_1;
@@ -26,6 +26,9 @@ pub fn main() {
     println!("{:?}", get_code_iso639_3("fr"));
 }
 ```
+
+
+
 ## Iso639-1 ##
 
 See full [README.md](./iso639-1/README.md)

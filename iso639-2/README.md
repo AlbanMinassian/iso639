@@ -8,23 +8,27 @@
 
 ## Usage ##
 
-``Cargo.toml`` :
+``Cargo.toml``
 
 ```rust
 [dependencies]
 iso639_2 = "0.1.12" // beware underscore
 ```
 
-``src/main.rs`` :
+<script src="https://gist.github.com/AlbanMinassian/72ad2a2c052c262fd84424d28b6c1ad8.js"></script>
+
+``src/main.rs`` ([gist](https://gist.github.com/AlbanMinassian/72ad2a2c052c262fd84424d28b6c1ad8))
 
 ```rust
 extern crate iso639_2;
 use iso639_2::Iso639_2;
+
 pub fn main() {
     println!("{:?}", Iso639_2::Eng);
     assert!(Iso639_2::Fra != Iso639_2::Eng);
 }
 ```
+
 
 ## Links ##
 

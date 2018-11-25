@@ -8,14 +8,14 @@
 
 ## Usage ##
 
-``Cargo.toml`` :
+``Cargo.toml``
 
 ```rust
 [dependencies]
 iso639-1 = "0.2.0"
 ```
 
-``src/main.rs`` :
+``src/main.rs`` ([gist](https://gist.github.com/AlbanMinassian/24eafa8253f69a5ba961ed3144b0d6a5))
 
 ```rust
 extern crate iso639_1;
@@ -27,6 +27,7 @@ pub fn main() {
     assert!(get_code_iso639_3("fr").unwrap() == "fra");
 }
 ```
+
 
 ## Links ##
 
