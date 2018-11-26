@@ -12,7 +12,7 @@
 
 ```rust
 [dependencies]
-iso639_2 = "0.1.12" // beware underscore
+iso639_2 = "0.1.13" // beware underscore
 ```
 
 <script src="https://gist.github.com/AlbanMinassian/72ad2a2c052c262fd84424d28b6c1ad8.js"></script>

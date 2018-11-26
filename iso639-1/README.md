@@ -12,7 +12,7 @@
 
 ```rust
 [dependencies]
-iso639-1 = "0.2.0"
+iso639-1 = "0.2.1"
 ```
 
 ``src/main.rs`` ([gist](https://gist.github.com/AlbanMinassian/24eafa8253f69a5ba961ed3144b0d6a5))
