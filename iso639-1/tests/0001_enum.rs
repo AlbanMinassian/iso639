@@ -1,5 +1,5 @@
 extern crate iso639_1;
-use iso639_1::Iso639_1;
+use iso639_1::{Iso639_1, Iso639v1Error, Iso639v1ErrorKind};
 
 #[test]
 fn enum_0001_not_equal() {
@@ -197,4 +197,10 @@ fn enum_0002_equal() {
 #[test]
 fn enum_0003_no_panic() {
     println!("{:?}", Iso639_1::En)
+}
+
+#[test]
+fn enum_0004_display_error() { // and increase coverage :)
+    assert_eq!("not found frite".to_string(), format!("{}", Iso639v1Error::from(Iso639v1ErrorKind::NotFoundFrom("frite".to_string()))));
+    assert_eq!("not found frite".to_string(), format!("{}", Iso639v1Error::from(Iso639v1ErrorKind::NotFoundTo("frite".to_string()))));
 }

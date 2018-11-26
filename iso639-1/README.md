@@ -12,19 +12,19 @@
 
 ```rust
 [dependencies]
-iso639-1 = "0.2.1"
+iso639-1 = "0.3.0"
 ```
 
 ``src/main.rs`` ([gist](https://gist.github.com/AlbanMinassian/24eafa8253f69a5ba961ed3144b0d6a5))
 
 ```rust
 extern crate iso639_1;
-use iso639_1::{Iso639_1, get_enum, get_code_iso639_3};
+use iso639_1::{Iso639_1, from_iso639_1, to_iso639_3};
 
 pub fn main() {
     assert!(Iso639_1::Fr != Iso639_1::En);
-    assert!(get_enum("fr").unwrap() == Iso639_1::Fr);
-    assert!(get_code_iso639_3("fr").unwrap() == "fra");
+    assert!(from_iso639_1("fr").unwrap() == Iso639_1::Fr);
+    assert!(to_iso639_3("fr").unwrap() == "fra");
 }
 ```
 

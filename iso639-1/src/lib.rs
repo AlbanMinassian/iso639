@@ -1,6 +1,7 @@
 //! # iso639-1
 //!
 //! [![Build Status](https://travis-ci.org/AlbanMinassian/iso639.svg?branch=master)](https://travis-ci.org/AlbanMinassian/iso639)
+//! [![codecov](https://codecov.io/gh/AlbanMinassian/iso639/branch/master/graph/badge.svg)](https://codecov.io/gh/AlbanMinassian/iso639)
 //! [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 //! [![iso639-1 Latest Version](https://img.shields.io/crates/v/iso639-1.svg)](https://crates.io/crates/iso639-1)
 //!
@@ -15,12 +16,12 @@
 //!
 //! ```rust
 //! extern crate iso639_1;
-//! use iso639_1::{Iso639_1, get_enum, get_code_iso639_3};
+//! use iso639_1::{Iso639_1, from_iso639_1, to_iso639_3};
 
 //! pub fn main() {
 //!     assert!(Iso639_1::Fr != Iso639_1::En);
-//!     assert!(get_enum("fr").unwrap() == Iso639_1::Fr);
-//!     assert!(get_code_iso639_3("fr").unwrap() == "fra");
+//!     assert!(from_iso639_1("fr").unwrap() == Iso639_1::Fr);
+//!     assert!(to_iso639_3("fr").unwrap() == "fra");
 //! }
 //! ```
 //!
@@ -50,13 +51,15 @@ pub struct Iso639v1Error {
 
 #[derive(Fail, Debug, Clone, Eq, PartialEq)]
 pub enum Iso639v1ErrorKind {
-    NotFoundIso639v1(String),
+    NotFoundFrom(String),
+    NotFoundTo(String),
 }
 
 impl fmt::Display for Iso639v1ErrorKind {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {
-            Iso639v1ErrorKind::NotFoundIso639v1(ref param) => { write!(f, "not found {}", param) },
+            Iso639v1ErrorKind::NotFoundFrom(ref param) => { write!(f, "not found {}", param) },
+            Iso639v1ErrorKind::NotFoundTo(ref param) => { write!(f, "not found {}", param) },
         }
     }
 }
@@ -476,21 +479,21 @@ pub enum Iso639_1 {
 }
 
 // ------------------------------------------------------------------------------------
-// get_enum(language: &str) -> Iso639_1
+// from_iso639_1(language: &str) -> Iso639_1
 // ------------------------------------------------------------------------------------
 /// return enum ``Iso639_1`` switch iso639-1 string (2 chars) - or error ``Iso639v1Error``
 ///
 /// # Examples
 /// ```rust
 /// extern crate iso639_1;
-/// use iso639_1::get_enum;
+/// use iso639_1::from_iso639_1;
 /// use iso639_1::Iso639_1;
 /// fn main() {
-///     let lang = get_enum("fr").unwrap();
+///     let lang = from_iso639_1("fr").unwrap();
 ///     assert!(lang == Iso639_1::Fr);
 /// }
 /// ```
-pub fn get_enum(language: &str) -> Result<Iso639_1, Iso639v1Error> {
+pub fn from_iso639_1(language: &str) -> Result<Iso639_1, Iso639v1Error> {
     match language {
         // match iso639-1
         "aa" => Ok(Iso639_1::Aa),
@@ -678,26 +681,26 @@ pub fn get_enum(language: &str) -> Result<Iso639_1, Iso639v1Error> {
         "zh" => Ok(Iso639_1::Zh),
         "zu" => Ok(Iso639_1::Zu),
         _ => {
-                return Err(Iso639v1Error::from(Iso639v1ErrorKind::NotFoundIso639v1(language.to_string())))
+                return Err(Iso639v1Error::from(Iso639v1ErrorKind::NotFoundFrom(language.to_string())))
         }
     }
 }
 
 // ------------------------------------------------------------------------------------
-// get_code_iso639_3(language: &str) -> &str
+// to_iso639_3(language: &str) -> &str
 // ------------------------------------------------------------------------------------
 /// get iso639-3 string (3 chars) switch iso639-1 string (2 chars) - or error ``Iso639v1Error``
 ///
 /// # Examples
 /// ```rust
 /// extern crate iso639_1;
-/// use iso639_1::get_code_iso639_3;
+/// use iso639_1::to_iso639_3;
 /// fn main() {
-///     let lang = get_code_iso639_3("fr").unwrap();
+///     let lang = to_iso639_3("fr").unwrap();
 ///     assert!(lang == "fra");
 /// }
 /// ```
-pub fn get_code_iso639_3(language: &str) -> Result<&str, Iso639v1Error> {
+pub fn to_iso639_3(language: &str) -> Result<&str, Iso639v1Error> {
     match language {
         "aa" => Ok("aar"),
         "ab" => Ok("abk"),
@@ -884,7 +887,7 @@ pub fn get_code_iso639_3(language: &str) -> Result<&str, Iso639v1Error> {
         "zh" => Ok("zho"),
         "zu" => Ok("zul"),
         _ => {
-                return Err(Iso639v1Error::from(Iso639v1ErrorKind::NotFoundIso639v1(language.to_string())))
+                return Err(Iso639v1Error::from(Iso639v1ErrorKind::NotFoundTo(language.to_string())))
         }
     }
 }
