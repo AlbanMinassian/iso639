@@ -4,11 +4,34 @@
 //! [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 //! [![iso639-1 Latest Version](https://img.shields.io/crates/v/iso639-1.svg)](https://crates.io/crates/iso639-1)
 //!
-//! iso639 v1 enum and utils
+//! iso639 v1 enum and utils (for Rust)
+//!
+//! ## Iso 639-1 ##
+//!
+//! ISO 639-1:2002, Codes for the representation of names of languages — Part 1: Alpha-2 code, is the first part of the ISO 639 series of international standards for language codes. Part 1 covers the registration of two-letter codes. There are 184 two-letter codes registered as of October 2015.
+//! The registered codes cover the world's major languages. (source [https://en.wikipedia.org/wiki/ISO_639-1](https://en.wikipedia.org/wiki/ISO_639-1))
+//!
+//! ## Example
+//!
+//! ```rust
+//! extern crate iso639_1;
+//! use iso639_1::{Iso639_1, get_enum, get_code_iso639_3};
+
+//! pub fn main() {
+//!     assert!(Iso639_1::Fr != Iso639_1::En);
+//!     assert!(get_enum("fr").unwrap() == Iso639_1::Fr);
+//!     assert!(get_code_iso639_3("fr").unwrap() == "fra");
+//! }
+//! ```
+//!
+//! ## Links
 //!
 //! github: [https://github.com/AlbanMinassian/iso639](https://github.com/AlbanMinassian/iso639)
 //!
-//! license: MIT
+//! ## license
+//!
+//! MIT
+
 
 extern crate failure;
 extern crate core;
@@ -38,6 +61,7 @@ impl fmt::Display for Iso639v1ErrorKind {
     }
 }
 
+#[cfg_attr(tarpaulin, skip)]
 impl Fail for Iso639v1Error {
     fn cause(&self) -> Option<&Fail> {
         self.inner.cause()
@@ -121,7 +145,7 @@ pub enum Iso639_1 {
     Bn,
     /// 639-2: bod, name: Tibetan Standard, Tibetan, Central (བོད་ཡིག)
     Bo,
-     /// 639-2: bre, name: Breton (brezhoneg)
+    /// 639-2: bre, name: Breton (brezhoneg)
     Br,
     /// 639-2: bos, name: Bosnian (bosanski jezik)
     Bs,
@@ -454,7 +478,7 @@ pub enum Iso639_1 {
 // ------------------------------------------------------------------------------------
 // get_enum(language: &str) -> Iso639_1
 // ------------------------------------------------------------------------------------
-/// return enum ``Iso639_1`` switch iso639-1 string (2 chars) else panic
+/// return enum ``Iso639_1`` switch iso639-1 string (2 chars) - or error ``Iso639v1Error``
 ///
 /// # Examples
 /// ```rust
@@ -662,7 +686,7 @@ pub fn get_enum(language: &str) -> Result<Iso639_1, Iso639v1Error> {
 // ------------------------------------------------------------------------------------
 // get_code_iso639_3(language: &str) -> &str
 // ------------------------------------------------------------------------------------
-/// get iso639-3 string (3 chars) switch iso639-1 string (2 chars) else panic
+/// get iso639-3 string (3 chars) switch iso639-1 string (2 chars) - or error ``Iso639v1Error``
 ///
 /// # Examples
 /// ```rust

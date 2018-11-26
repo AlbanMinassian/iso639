@@ -4,7 +4,6 @@
 [![codecov](https://codecov.io/gh/AlbanMinassian/iso639/branch/master/graph/badge.svg)](https://codecov.io/gh/AlbanMinassian/iso639)
 [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-
 ## Example
 
 ``Cargo.toml``
@@ -27,7 +26,9 @@ pub fn main() {
 }
 ```
 
+## Iso639 ##
 
+ISO 639 is a set of standards by the International Organization for Standardization that is concerned with representation of names for languages and language groups. (source [https://en.wikipedia.org/wiki/ISO_639](https://en.wikipedia.org/wiki/ISO_639))
 
 ## Iso639-1 ##
 
@@ -40,8 +41,6 @@ See full [README.md](./iso639-1/README.md)
 See full [README.md](./iso639-2/README.md)
 
 [![iso639_2 Latest Version](https://img.shields.io/crates/v/iso639_2.svg)](https://crates.io/crates/iso639_2)
-
-
 
 ## Links ##
 
