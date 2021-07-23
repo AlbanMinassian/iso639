@@ -107,7 +107,7 @@ impl From<Iso639v1ErrorKind> for Iso639v1Error {
 ///     assert!(Iso639_1::Fr != Iso639_1::En);
 /// }
 /// ```
-#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd, Hash)]
 pub enum Iso639_1 {
     /// 639-2: aar, name: Afar (Afaraf)
     Aa,
