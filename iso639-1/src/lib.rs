@@ -33,13 +33,12 @@
 //!
 //! MIT
 
-
-extern crate failure;
 extern crate core;
+extern crate failure;
 
-use std::fmt;
 use core::fmt::Display;
 use failure::{Backtrace, Context, Fail};
+use std::fmt;
 
 // ------------------------------------------------------------------------------------
 // Error
@@ -58,8 +57,8 @@ pub enum Iso639v1ErrorKind {
 impl fmt::Display for Iso639v1ErrorKind {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match *self {
-            Iso639v1ErrorKind::NotFoundFrom(ref param) => { write!(f, "not found {}", param) },
-            Iso639v1ErrorKind::NotFoundTo(ref param) => { write!(f, "not found {}", param) },
+            Iso639v1ErrorKind::NotFoundFrom(ref param) => write!(f, "not found {}", param),
+            Iso639v1ErrorKind::NotFoundTo(ref param) => write!(f, "not found {}", param),
         }
     }
 }
@@ -88,7 +87,9 @@ impl Iso639v1Error {
 
 impl From<Iso639v1ErrorKind> for Iso639v1Error {
     fn from(kind: Iso639v1ErrorKind) -> Iso639v1Error {
-        Iso639v1Error { inner: Context::new(kind)}
+        Iso639v1Error {
+            inner: Context::new(kind),
+        }
     }
 }
 
@@ -681,7 +682,9 @@ pub fn from_iso639_1(language: &str) -> Result<Iso639_1, Iso639v1Error> {
         "zh" => Ok(Iso639_1::Zh),
         "zu" => Ok(Iso639_1::Zu),
         _ => {
-                return Err(Iso639v1Error::from(Iso639v1ErrorKind::NotFoundFrom(language.to_string())))
+            return Err(Iso639v1Error::from(Iso639v1ErrorKind::NotFoundFrom(
+                language.to_string(),
+            )))
         }
     }
 }
@@ -887,7 +890,9 @@ pub fn to_iso639_3(language: &str) -> Result<&str, Iso639v1Error> {
         "zh" => Ok("zho"),
         "zu" => Ok("zul"),
         _ => {
-                return Err(Iso639v1Error::from(Iso639v1ErrorKind::NotFoundTo(language.to_string())))
+            return Err(Iso639v1Error::from(Iso639v1ErrorKind::NotFoundTo(
+                language.to_string(),
+            )))
         }
     }
 }
