@@ -31,7 +31,7 @@
 ///     assert!(Iso639_2::Fra != Iso639_2::Eng);
 /// }
 /// ```
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd)]
 pub enum Iso639_2 {
     /// Afar - 639-1: aa
     Aar,
