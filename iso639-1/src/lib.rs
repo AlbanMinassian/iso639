@@ -682,7 +682,7 @@ pub fn from_iso639_1(language: &str) -> Result<Iso639_1, Iso639v1Error> {
         "zh" => Ok(Iso639_1::Zh),
         "zu" => Ok(Iso639_1::Zu),
         _ => {
-            return Err(Iso639v1Error::from(Iso639v1ErrorKind::NotFoundFrom(
+            Err(Iso639v1Error::from(Iso639v1ErrorKind::NotFoundFrom(
                 language.to_string(),
             )))
         }
@@ -890,7 +890,7 @@ pub fn to_iso639_3(language: &str) -> Result<&str, Iso639v1Error> {
         "zh" => Ok("zho"),
         "zu" => Ok("zul"),
         _ => {
-            return Err(Iso639v1Error::from(Iso639v1ErrorKind::NotFoundTo(
+            Err(Iso639v1Error::from(Iso639v1ErrorKind::NotFoundTo(
                 language.to_string(),
             )))
         }
