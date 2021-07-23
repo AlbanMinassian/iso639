@@ -65,7 +65,7 @@ impl fmt::Display for Iso639v1ErrorKind {
 
 #[cfg_attr(tarpaulin, skip)]
 impl Fail for Iso639v1Error {
-    fn cause(&self) -> Option<&Fail> {
+    fn cause(&self) -> Option<&dyn Fail> {
         self.inner.cause()
     }
     fn backtrace(&self) -> Option<&Backtrace> {
