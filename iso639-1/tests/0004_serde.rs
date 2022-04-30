@@ -1,6 +1,5 @@
 extern crate iso639_1;
 extern crate serde;
-// extern serde_json;
 
 use iso639_1::Iso639_1;
 use serde::{Deserialize, Serialize};
