@@ -22,3 +22,9 @@ fn deserialize() {
     let foo: Foo = serde_json::from_str(s).expect("fail to deserialize");
     assert_eq!(foo.lang, Iso639_1::Fr);
 }
+
+#[test]
+fn fail_deserialize() {
+    let s = r#"{"lang":"frite"}"#;
+    assert!(serde_json::from_str::<Foo>(s).is_err());
+}
