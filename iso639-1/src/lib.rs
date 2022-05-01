@@ -12,6 +12,12 @@
 //! ISO 639-1:2002, Codes for the representation of names of languages — Part 1: Alpha-2 code, is the first part of the ISO 639 series of international standards for language codes. Part 1 covers the registration of two-letter codes. There are 184 two-letter codes registered as of October 2015.
 //! The registered codes cover the world's major languages. (source [https://en.wikipedia.org/wiki/ISO_639-1](https://en.wikipedia.org/wiki/ISO_639-1))
 //!
+//! ## Features
+//!
+//! Optional features:
+//!
+//! - [`serde`][]: Enable serialization/deserialization via serde.
+//!
 //! ## Example
 //!
 //! ```rust

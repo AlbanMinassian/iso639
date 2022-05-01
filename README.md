@@ -1,4 +1,4 @@
-# iso639 #
+# iso639
 
 [![Build Status](https://travis-ci.org/AlbanMinassian/iso639.svg?branch=master)](https://travis-ci.org/AlbanMinassian/iso639)
 [![codecov](https://codecov.io/gh/AlbanMinassian/iso639/branch/master/graph/badge.svg)](https://codecov.io/gh/AlbanMinassian/iso639)
@@ -6,14 +6,14 @@
 
 ## Example
 
-``Cargo.toml``
+`Cargo.toml`
 
 ```rust
 [dependencies]
 iso639-1 = "0.3.0"
 ```
 
-``src/main.rs`` ([gist](https://gist.github.com/AlbanMinassian/320cd39edd5a7a553f2df157e9cc35b1))
+`src/main.rs` ([gist](https://gist.github.com/AlbanMinassian/320cd39edd5a7a553f2df157e9cc35b1))
 
 ```rust
 extern crate iso639_1;
@@ -26,29 +26,35 @@ pub fn main() {
 }
 ```
 
-## Iso639 ##
+## Iso639
 
 ISO 639 is a set of standards by the International Organization for Standardization that is concerned with representation of names for languages and language groups. (source [https://en.wikipedia.org/wiki/ISO_639](https://en.wikipedia.org/wiki/ISO_639))
 
-## Iso639-1 ##
+## Iso639-1
 
 See full [README.md](./iso639-1/README.md)
 
 [![iso639-1 Latest Version](https://img.shields.io/crates/v/iso639-1.svg)](https://crates.io/crates/iso639-1)
 
-## Iso639-2 ##
+### Features
+
+Optional features:
+
+- [`serde`](https://github.com/serde-rs/serde): Enable serialization/deserialization via serde.
+
+## Iso639-2
 
 See full [README.md](./iso639-2/README.md)
 
 [![iso639_2 Latest Version](https://img.shields.io/crates/v/iso639_2.svg)](https://crates.io/crates/iso639_2)
 
-## Links ##
+## Links
 
 - [documentation iso639-1 (docs.rs)](https://docs.rs/iso639-1)
 - [documentation iso639_2 (docs.rs)](https://docs.rs/iso639_2)
 - [wikipedia ISO_639](https://en.wikipedia.org/wiki/ISO_639) [[en](https://en.wikipedia.org/wiki/ISO_639), [fr](https://fr.wikipedia.org/wiki/ISO_639), [de](https://de.wikipedia.org/wiki/ISO_639), [fr](https://fr.wikipedia.org/wiki/ISO_639), [es](https://es.wikipedia.org/wiki/ISO_639), [it](https://it.wikipedia.org/wiki/ISO_639)]
 
-## License ##
+## License
 
 Copyright © 2018, [Alban Minassian](https://github.com/AlbanMinassian)
 
