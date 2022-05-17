@@ -43,6 +43,9 @@
 #[cfg(feature = "serde")]
 extern crate serde;
 
+#[cfg(feature = "strum")]
+extern crate strum_macros;
+
 #[cfg(feature = "serde")]
 mod serde_impl;
 
@@ -121,6 +124,7 @@ impl From<Iso639v1ErrorKind> for Iso639v1Error {
 /// }
 /// ```
 #[derive(Copy, Clone, Debug, Eq, PartialEq, Ord, PartialOrd, Hash)]
+#[cfg_attr(feature = "strum", derive(strum_macros::EnumIter))]
 pub enum Iso639_1 {
     /// 639-2: aar, name: Afar (Afaraf)
     Aa,

@@ -13,11 +13,18 @@ readme = "README.md"
 workspace = ".."
 
 # --------------------------------------------------------------------
+[features]
+# --------------------------------------------------------------------
+strum = ["dep:strum", "dep:strum_macros"]
+
+# --------------------------------------------------------------------
 [dependencies]
 # --------------------------------------------------------------------
 failure = "0.1.3"
 
 serde = { version = "1", optional = true }
+strum = { version = "0.24", optional = true }
+strum_macros = { version = "0.24", optional = true }
 
 # --------------------------------------------------------------------
 [dev-dependencies]
@@ -41,3 +48,8 @@ path = "tests/0003_to_code.rs"
 name = "serde"
 path = "tests/0004_serde.rs"
 required-features = ["serde"]
+
+[[test]]
+name = "strum"
+path = "tests/0005_strum.rs"
+required-features = ["strum"]
