@@ -17,6 +17,7 @@
 //! Optional features:
 //!
 //! - [`serde`][]: Enable serialization/deserialization via serde.
+//! - [`strum`][]: Derive [EnumIter](https://docs.rs/strum_macros/0.24.0/strum_macros/derive.EnumIter.html) on Iso639_1.
 //!
 //! ## Example
 //!
