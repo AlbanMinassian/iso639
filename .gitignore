@@ -2,3 +2,4 @@ target
 coverage.html
 cobertura.xml
 .vscode
+zzz_*

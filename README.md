@@ -49,6 +49,10 @@ See full [README.md](./iso639-2/README.md)
 
 [![iso639_2 Latest Version](https://img.shields.io/crates/v/iso639_2.svg)](https://crates.io/crates/iso639_2)
 
+## Used by
+
+- [https://melodium.tech/](https://melodium.tech/)
+
 ## Links
 
 - [documentation iso639-1 (docs.rs)](https://docs.rs/iso639-1)
