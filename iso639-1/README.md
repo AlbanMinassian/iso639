@@ -5,14 +5,13 @@
 [![License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![iso639-1 Latest Version](https://img.shields.io/crates/v/iso639-1.svg)](https://crates.io/crates/iso639-1)
 
-
 ## Usage ##
 
 ``Cargo.toml``
 
 ```rust
 [dependencies]
-iso639-1 = "0.3.0"
+iso639-1 = "0.4.1"
 ```
 
 ``src/main.rs`` ([gist](https://gist.github.com/AlbanMinassian/24eafa8253f69a5ba961ed3144b0d6a5))
@@ -27,7 +26,6 @@ pub fn main() {
     assert!(to_iso639_3("fr").unwrap() == "fra");
 }
 ```
-
 
 ## Links ##
 
