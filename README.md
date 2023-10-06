@@ -41,6 +41,7 @@ See full [README.md](./iso639-1/README.md)
 Optional features:
 
 - [`serde`](https://github.com/serde-rs/serde): Enable serialization/deserialization via serde.
+- `strum`: Derive [EnumIter](https://docs.rs/strum_macros/0.24.0/strum_macros/derive.EnumIter.html) on Iso639_1.
 
 ## Iso639-2
 
